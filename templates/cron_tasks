@@ -63,7 +63,7 @@ reload_workers()
 rotate_logs()
 {
   if [ -x /usr/sbin/logrotate ] ; then
-    /usr/sbin/logrotate -s $BASEDIR/var/logrotate.status $CONFDIR/logrotate.conf >/dev/null
+    /usr/sbin/logrotate -s $BASEDIR/var/log/.logrotate.status $CONFDIR/logrotate.conf >/dev/null
   fi
 }
 
